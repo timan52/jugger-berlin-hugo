@@ -7,7 +7,7 @@ url: "/was-ist-jugger/"
 <div class="wp-import">
 <section class="builder-row"><div class="builder-cell"><p><em>Jugger verbindet Elemente aus Individualsportarten wie Fechten und Stockkampf mit Teamsportarten wie American Football und Rugby zu einem hoch-taktischen, technisch anspruchsvollen und schnellen Sport.</em></p>
 <p><em>Ziel des Spiels ist es den Ball aus der Mitte zu erobern und die Person auf der Läufie-Position auf dem Weg zum Tor (Mal) zu schützen. Dazu sind die restlichen Teammitglieder mit gepolsterten Stäben (Pompfen) ausgestattet, mit denen sie das gegnerische Team abschlagen können. Wer getroffen wurde, kniet ab und scheidet für einige Sekunden aus. Die hohe Dynamik des Sports erfordert Konzentration, Teamwork und Reaktionsvermögen, um auf ständige Veränderungen auf dem Feld reagieren zu können.</em></p>
-[tm-timeline layout="0" visible-items="15" date-format="7" anchors="false" order="ASC"]</div></section>
+</div></section>
 <section class="builder-row"><div class="builder-cell"><p><a href="https://www.google.com/maps/d/embed?mid=1VgItndYp70gdjA46Ncf9CDW5szg" rel="noopener noreferrer" target="_blank">Externe Karte / Video öffnen</a></p></div>
 <div class="builder-cell">Die Idee des Juggersports beruht auf dem Endzeit-Film „Die Jugger – Kampf der Besten“ aus dem Jahr 1989. Wurde der Filmsport anfangs noch originalgetreu nachgeahmt, etablierte sich schnell eine sportlich orientierte Fraktion, die 1995 das erste Sport-Turnier in Hamburg organisierte.
 
