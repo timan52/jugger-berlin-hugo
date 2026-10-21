@@ -1,15 +1,21 @@
-# Stand: öffentlich indexierte Website Oktober 2026. Vor Veröffentlichung bestätigen.
+# Trainingszeiten 2026
+
 - type: 'Hallentraining'
   day: 'Donnerstag'
   time: '19:00 – 22:00 Uhr'
   place: 'Puccinistraße 2–6, 10409 Berlin'
+  map_url: 'https://maps.app.goo.gl/mvYnLAFrK2QKd3HB7'
+
 - type: 'Draußen'
   day: 'Dienstag'
   time: '17:00 – 19:00 Uhr'
   place: 'Tempelhofer Feld'
+  map_url: 'https://maps.app.goo.gl/YaxkfiFcfCBR17j86'
   note: 'Bitte vorher anmelden.'
+
 - type: 'Draußen'
   day: 'Sonntag'
   time: '14:00 – 17:00 Uhr'
   place: 'Tempelhofer Feld'
+  map_url: 'https://maps.app.goo.gl/YaxkfiFcfCBR17j86'
   note: 'Bitte vorher anmelden.'
