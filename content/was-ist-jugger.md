@@ -67,5 +67,4 @@ Derzeit finden allein in Deutschland jährlich knapp 50 Turniere statt, wobei di
 <div class="builder-cell"><figure class="source-image"><img alt="" loading="lazy" src="/wp-content/uploads/2018/09/Feld-Jaeger.png"></figure>
 <span>Jagd</span>
 <span>Ein Teammitglied hält sich hinter der Linie, um sich erst am Ende gegenüber einer bestimmten Gegenposition zu stellen. Die anderen Teammitglieder machen die jeweilige Position dann frei. Diese Taktik wird oft genutzt, um die eigene "Anti-Kette" gegen die gegnerische Kette zu stellen.</span></div></section>
-<section class="builder-row"><div class="builder-cell"><h2>Impressionen</h2></div></section>
 </div>
