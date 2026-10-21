@@ -1,0 +1,60 @@
+{
+  "features": [
+    {
+      "image": "/wp-content/uploads/2018/04/5vs5FRONT.png",
+      "title": "Das Spiel",
+      "subtitle": "5 vs 5",
+      "description": "Jugger ist ein gendermixed Sport mit zwei Teams mit jeweils 5 Spielenden. Ziel ist es, den Ball in das gegnerische Platzierfeld, Mal genannt, zu bringen, um ein Punkt zu erzielen. Das Team mit den meisten Punkten gewinnt. Dazu muss der Ball, Jugg genannt, von dem Mensch auf der Läufie -Position aufgenommen und zum gegnerischen Mal gebracht werden. Die Mitspielenden beschützen die Läufie-Person, indem sie mit gepolsterten Stäben ( Pompfen ) das gegnerische Team abschlagen. Wer getroffen wurde, erhält eine Zeitstrafe, muss abknien und scheidet für einige Sekunden aus."
+    },
+    {
+      "image": "/wp-content/uploads/2018/04/pompfenFrontpage.png",
+      "title": "Die Pompfen",
+      "subtitle": "Vier Nahpompfen und die Kette",
+      "description": "Es gibt insgesamt 5 Pompfentypen: Kette, Q-Tip, Stab, Langpompfe und Kurzpompfe mit Schild. Alle haben gemeinsam, dass sie gut gepolstert sind, um Verletzungen zu vermeiden. Die verschiedenen Typen spielen sich stark unterschiedlich und setzen jeweils ausgiebiges Training voraus."
+    },
+    {
+      "image": "/wp-content/uploads/2018/04/Qwik-Frontpage.png",
+      "title": "Die Läufie Position",
+      "subtitle": "Taktik und Geschwindigkeit",
+      "description": "Läufies dürfen keine Pompfe tragen und sind daher darauf angewiesen, dass ihr Team sie beschützt, bevor sie am gegnerischen Mal einen Punkt erzielen können. Die Position setzt in erster Linie hohe Agilität und gute Übersicht voraus, um den gegnerischen Pompfern auszuweichen und das eigene Team zu koordinieren. Beim Kontakt mit dem gegnerischen Läufie ist Körpereinsatz erlaubt."
+    },
+    {
+      "image": "/wp-content/uploads/2018/04/Turnierbaum.png",
+      "title": "Turniere",
+      "subtitle": "So wird gespielt",
+      "description": "Jährlich finden allein in Deutschland knapp 50 Turniere statt. Da meist dutzende Mannschaften für ein Wochenende anreisen, werden komplexe Turnierbäume gespielt, um allen Teams möglichst viele fordernde Spiele zu bieten. Eine Begegnung wird dabei entweder mit einem Zeitlimit ausgetragen oder geht über mehrere Gewinnsätze."
+    }
+  ],
+  "field": {
+    "title": "Das Spielfeld",
+    "subtitle": "Rechteck ohne Ecken",
+    "description": "Ein Juggerfeld misst 40x20 m und entspricht einem länglichen Achteck. Der Jugg wird vor jeder Runde mittig platziert. Die beiden Male befinden sich jeweils 2 m von der Grundlinie entfernt. Zu Beginn einer Runde starten beide Teams an ihrer Grundlinie, sprinten zur Mitte und versuchen im Linienspiel den Jugg zu erobern bzw. direkt die Oberhand zu gewinnen.",
+    "image": "/wp-content/uploads/2018/04/Feld-Front.png"
+  },
+  "club": {
+    "title": "Der Verein",
+    "subtitle": "Since 1998",
+    "description": "Der Jugger e.V. ist der älteste und einer der größten Juggervereine der Welt. Er dient als Dachorganisation für mehrere Berliner Teams, die sich hier Ausrüstung, Trainingsflächen und Ressourcen teilen.",
+    "image": "/wp-content/uploads/2018/04/VereinslogoMedium.png"
+  },
+  "teams": [
+    {
+      "image": "/wp-content/uploads/2018/04/GAG-Logo.png",
+      "title": "Grünanlagen Guerilla",
+      "subtitle": "Deutscher Meister a.D.",
+      "description": "Die GAG ist das älteste e.V.-Team und konnte sich auf zahlreichen Turnieren gegen die deutsche und internationale Leistungsspitze behaupten. Die Spieler:innen haben dabei die Juggercommunity über die Jahre aktiv mitgeprägt."
+    },
+    {
+      "image": "/wp-content/uploads/2018/04/FALCO-Logo.png",
+      "title": "Falco Jugger",
+      "subtitle": "Falco flieg!",
+      "description": "Nicht viel jünger als die GAG, kann das Team auf eine ereignisreiche Geschichte mit vielen Hoch- und Tiefflügen zurückblicken. Bei Falco liegt der Fokus auf gutem Teamspiel, gemeinsamer Weiterentwicklung und Spaß am Spiel. Außerdem haben wir mit Abstand das schönste Trikot in Berlin. ;)"
+    },
+    {
+      "image": "/wp-content/uploads/2018/04/SKULL-Logo.png",
+      "title": "Skull!",
+      "subtitle": "Partnerteam vom TSV Rudow",
+      "description": "Skull! gehört zu den frühen Teams des Juggersports und kann auf zahlreiche Erfolge zurückblicken. Das Team ist offiziell dem TSV Rudow zugehörig, aber schon seit der Gründung auch eng mit dem Jugger e.V. verwoben. Viele Entwicklungen der deutschen Juggercommunity folgten direkt aus der Arbeit einzelner Teammitglieder."
+    }
+  ]
+}

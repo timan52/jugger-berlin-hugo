@@ -1,0 +1,4 @@
+{{ define "main" }}
+<section class="page-head"><h1>{{ .Title }}</h1></section>
+<section class="page-body"><article class="page-inner"><div class="source-page wp-import">{{ $html := replaceRE `(src|href)="/` (printf `${1}="%s` .Site.Home.RelPermalink) .Content }}{{ $html | safeHTML }}</div></article></section>
+{{ end }}

@@ -1,0 +1,35 @@
+baseURL = 'https://jugger-berlin.de/'
+languageCode = 'de-de'
+title = 'Jugger e.V. – Jugger in Berlin'
+enableRobotsTXT = true
+
+[params]
+  description = 'Jugger in Berlin – Training, Teams und Informationen zum Jugger e.V.'
+  ready = false # Erst nach vollständiger Inhalts- und Rechtsprüfung true setzen
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menus.main]]
+ name = 'Was ist Jugger?'
+ pageRef = '/was-ist-jugger'
+ weight = 20
+[[menus.main]]
+ name = 'Mitmachen'
+ pageRef = '/mitmachen'
+ weight = 30
+[[menus.main]]
+ name = 'Fotos'
+ pageRef = '/fotos'
+ weight = 40
+[[menus.main]]
+[[menus.main]]
+ name = 'Der Verein'
+ pageRef = '/der-verein'
+ weight = 60
+[[menus.main]]
+ name = 'Software'
+ pageRef = '/software'
+ weight = 70

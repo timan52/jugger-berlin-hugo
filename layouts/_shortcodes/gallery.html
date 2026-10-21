@@ -1,0 +1,5 @@
+<div class="gallery">
+{{ range .Site.Data.gallery }}
+<a class="gallery-tile" href="{{ .src | relURL }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .alt }} in voller Größe öffnen"><img src="{{ .src | relURL }}" alt="{{ .alt }}" loading="lazy"></a>
+{{ end }}
+</div>

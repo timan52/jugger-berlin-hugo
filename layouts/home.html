@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section class="home-opening">
+  <div class="home-opening-inner">
+    <div class="federation-logos"><img src="{{ "wp-content/uploads/2018/10/Landessportbund_Berlin_logo.svg_-231x300.png" | relURL }}" alt="Landessportbund Berlin" loading="lazy"><span>Berliner Turn- und<br>Freizeitsport-Bund</span></div>
+    <div class="training-card">
+      <h1>Trainingszeiten 2026</h1>
+      <p><strong>Hallen Training</strong> – Donnerstags 19:00 – 22:00 Uhr<br>Puccinistraße 2–6, 10409 Berlin (<a href="https://maps.app.goo.gl/mvYnLAFrK2QKd3HB7">Karte</a>)</p>
+      <p><strong>Draußen Training</strong> – Dienstags 17:00 – 19:00 Uhr<br>Bitte vorher anmelden. Tempelhofer Feld (<a href="https://maps.app.goo.gl/YaxkfiFcfCBR17j86">Karte</a>)</p>
+      <p><strong>Draußen Training</strong> – Sonntags 14:00 – 17:00 Uhr<br>Bitte vorher anmelden. Tempelhofer Feld (<a href="https://maps.app.goo.gl/YaxkfiFcfCBR17j86">Karte</a>)</p>
+      <p class="training-tip"><em>Probetraining: Kommt gerne jederzeit vorbei! Da Trainings in seltenen Fällen mal ausfallen können, schreibt uns gerne vorher unter <a href="mailto:info@jugger-berlin.de">info@jugger-berlin.de</a> an.</em></p>
+    </div>
+  </div>
+</section>
+<section class="home-features" aria-label="Jugger erklärt">
+ <div class="wide-wrap features-grid">
+ {{ range .Site.Data.home.features }}
+  <article class="feature-block">
+   <div class="feature-art"><img src="{{ .image | relURL }}" alt="" loading="lazy"></div>
+   <div class="feature-description"><h2>{{ .title }}</h2><p class="micro-title">{{ .subtitle }}</p><p>{{ .description }}</p></div>
+  </article>
+ {{ end }}
+ </div>
+</section>
+<div class="photo-divider photo-divider-one" role="img" aria-label="Jugger-Wettkampf"></div>
+<section class="home-field grid-paper">
+ <div class="field-description"><h2>{{ .Site.Data.home.field.title }}</h2><p class="micro-title">{{ .Site.Data.home.field.subtitle }}</p><p>{{ .Site.Data.home.field.description }}</p></div>
+ <img class="field-img" src="{{ .Site.Data.home.field.image | relURL }}" alt="Grafische Darstellung eines Jugger-Spielfeldes mit zwei Teams" loading="lazy">
+</section>
+<div class="photo-divider photo-divider-two" role="img" aria-label="Jugger-Sportlerinnen und -Sportler"></div>
+<section class="home-club">
+ <div class="club-intro"><img src="{{ .Site.Data.home.club.image | relURL }}" alt="Jugger e.V. Logo" loading="lazy"><h2>{{ .Site.Data.home.club.title }}</h2><p class="micro-title">{{ .Site.Data.home.club.subtitle }}</p><p>{{ .Site.Data.home.club.description }}</p></div>
+ <div class="wide-wrap teams-grid">
+ {{ range .Site.Data.home.teams }}
+ <article class="team-card"><div class="team-art"><img src="{{ .image | relURL }}" alt="Logo {{ .title }}" loading="lazy"></div><h3>{{ .title }}</h3><p class="micro-title">{{ .subtitle }}</p><p>{{ .description }}</p></article>
+ {{ end }}
+ </div>
+</section>
+{{ end }}
