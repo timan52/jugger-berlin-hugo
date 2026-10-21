@@ -7,7 +7,7 @@ url: "/impressum/"
 <div class="wp-import">
 <div class="impressum">
 <h1>Impressum</h1>
-Angaben gemäß § 5 TMG
+Angaben gemäß § 5 DDG
 
 <strong>Vorstand: </strong>
 Verantwortliche Vorsitzende
