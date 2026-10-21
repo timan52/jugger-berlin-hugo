@@ -5,5 +5,5 @@ url: "/fotos/best-of-jugger/"
 ---
 
 <div class="wp-import">
-<p class="notice"><strong>Fotogalerie noch nicht vollständig:</strong> Diese NextGEN-Galerie wird nach Übernahme der Originalbilder und der Galeriezuordnung ergänzt.</p>
+<p class="notice"><strong>Fotogalerie noch nicht verfügbar</strong></p>
 </div>
