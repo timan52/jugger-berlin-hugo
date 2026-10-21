@@ -1,32 +1,23 @@
-# Migrationsstand – 21. Oktober 2026 – Version 3
+# Migration v4 – Änderungsprotokoll
 
-## Aus gelieferten Materialien rekonstruiert
+## Erledigt
 
-- WordPress-XML: Original-Seiteninhalte, SiteOrigin-Layout-Text und relevante Medienzuordnungen.
-- `hestia.zip` und `hestia-child.zip`: Gestaltungsvorgaben und dekorative Grafiken. Keine PHP-Dateien für den statischen Build verwendet.
-- `uploads.zip`: öffentlich verwendbare Bilder und PDFs; personenbezogene Exportdateien und PHP-Skripte sind ausgeschlossen.
-- Screenshots der Startseite, „Was ist Jugger?“, „Mitmachen“, „Der Verein“ und „Software“ als visuelle Referenz.
+- Neues durchgängiges Layout für Startseite und Unterseiten; responsive Design mit mobilen Menüs und prominentem Probetraining.
+- Erstes auf Original-Fotos basiertes Hero, eigene Trainingskarte aus `data/training.yaml`, vier Sportkacheln aus `data/home.json`, Spielfeld-Darstellung, Vereinsbereich mit drei Teamlogos, Abschluss-CTA.
+- Startseiten- und Gallery-Shortcode-Bildpfade von führendem `/` befreit, bevor `relURL` angewendet wird. Dies ist wichtig bei GitHub-Pages-Unterpfaden.
+- Vorhandene WordPress-Originalbilder, Texte, PDFs, Favicon sowie Medienpfade weitgehend erhalten.
+- Veranstaltungs- und YouTube-Einbindung nicht neu aufgebaut; umfangreiche NextGEN-Bilder werden wie gewünscht nicht importiert.
+- Bildquellen des Home-Entwurfs (11 `img` + CSS-Hintergründe) liegen im statischen Medienverzeichnis; Visualisierung in Desktop und Mobile mit Chromium geprüft.
 
-## Original-Hintergrundbilder aus SiteOrigin row style (WordPress-Export)
+## Noch ausstehend
 
-- Oberer Startseiten-Bereich: Medien-ID `25285` → `2018/11/Berliner_Jugger_Pokal_2017-349-e1791905181669.jpg`
-- Erster Fotostreifen: ID `25284` → `2018/11/Berliner_Jugger_Pokal_2017-128.jpg`
-- Spielfeld-Raster: ID `20471` → `2018/04/feldbg.png`; Child-Theme `images/feldbg.png` zusätzlich übernommen
-- Zweiter Fotostreifen: ID `22087` → `2018/05/Berliner_Jugger_Pokal_2017-356.jpg`
+- **Hugo-Produktionsbuild** und Deployment von v4 via GitHub Actions erfolgreich durchlaufen lassen.
+- URL-, Layout-, Kontrast- und mobile Funktionsprüfungen auf der öffentlichen Testadresse.
+- Persönliche Angaben in Impressum, Vorstand, Trainingszeiten und Verein gegen aktuelle Daten prüfen.
+- Weitere WordPress-Inhalte und mögliche Verlinkungen auf nicht migrierte Dienste kontrollieren.
+- Alle Datenschutz- und Urheberrechtsfragen der hochgeladenen Bilder/Inhalte vor Livegang prüfen.
+- Erst nach Bestätigung des Vereins die Domain jugger-berlin.de auf GitHub Pages umstellen.
 
-## Bewusst nicht migriert
+## Sicherheit
 
-- WordPress, Hestia-PHP, BuddyPress, bbPress, W3 Total Cache und andere WP-Plugins
-- Veranstaltungskalender
-- YouTube-Iframes (alte Videoseite bleibt optionaler, einfacher Inhaltsstand)
-- NextGEN-Galerie aus `/wp-content/gallery/` – später möglich
-- Private WordPress-Exportdaten, Benutzerkonten, Passwörter und Datenbanken
-
-## Noch zu prüfen
-
-1. Ein tatsächlicher Hugo-Build und die GitHub-Pages-Vorschau (noch nicht erfolgreich ausgeführt).
-2. Exakte Abstände, Logos und Layout über Desktop und Mobil; die Pixelgenauigkeit wurde anhand der Screenshots nur näherungsweise nachgebaut.
-3. Optional: WordPress Customizer `theme_mods_hestia-child` aus der Datenbank, falls Farb- oder Layoutdetails deutlich abweichen. Vollständige Datenbank nicht nötig.
-4. Veröffentlichte Links einschließlich alter PDF-Adressen; `2018/10/Beitrittsformular_Jugger_e_V.pdf` wurde in v2 auf neuere vorhandene 2025-Datei angepasst.
-5. Aktuelle und rechtlich korrekte Informationen in `/der-verein/`, `/mitmachen/`, `/impressum/`.
-6. Bestehende Medienrechte und Datenschutzhinweise vor der Veröffentlichung.
+Kein WordPress-PHP, kein kompletter WP-Datenbankexport, keine Nutzerprofile, keine privaten Archive im Repository. Profihost und DNS bleiben unangetastet.

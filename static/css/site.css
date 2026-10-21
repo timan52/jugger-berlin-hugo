@@ -1,55 +1,187 @@
-/* Jugger e.V. – Hugo-Neuimplementierung des Hestia-Child-Theme-Erscheinungsbilds */
-:root{--yellow:#d89c09;--black:#171717;--text:#3b3b3b;--link:#d69900;--wide:1600px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:#fafafa;font-family:Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.62}
-a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible,button:focus-visible{outline:3px solid #efbd34;outline-offset:3px}img{height:auto;max-width:100%}
-.skip{position:absolute;left:8px;top:-100px;z-index:100;background:#fff;padding:10px}.skip:focus{top:5px}
-.site-header{background:#fff;border-top:3px solid #e1e8eb;box-shadow:0 2px 8px #0002;position:relative;z-index:10}
-.header-wrap{width:min(1410px,calc(100% - 58px));margin:auto;min-height:61px;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.brand{display:flex;align-items:center}.brand img{width:58px;height:58px;object-fit:contain}
-.site-nav{display:flex;gap:23px;align-items:center;justify-content:flex-end;flex-wrap:wrap}.site-nav a{color:#666;font-size:11px;text-transform:uppercase;font-weight:500;white-space:nowrap;letter-spacing:.015em}.site-nav a[aria-current="page"],.site-nav a:hover{color:var(--yellow);text-decoration:none}
-.menu-toggle{display:none;border:1px solid #ccc;border-radius:3px;background:#fff;padding:7px 13px;color:#444;cursor:pointer}
-/* Main page matches screenshot (light blank-ish hero with training card on the right) */
-.home-opening{min-height:325px;background:#f2f4f6 url('../wp-content/uploads/2018/11/Berliner_Jugger_Pokal_2017-349-e1791905181669.jpg') center/cover no-repeat;position:relative}
-.home-opening::before{content:'';position:absolute;inset:0;background:rgba(245,247,250,.91)}
-.home-opening-inner{position:relative;max-width:var(--wide);margin:0 auto;min-height:325px;padding:85px 15px 20px;display:flex;justify-content:flex-end;align-items:center}
-.federation-logos{position:absolute;right:15px;top:0;display:flex;align-items:flex-start;gap:15px;font-size:10px;color:#606060}.federation-logos img{height:72px;width:auto;object-fit:contain}.federation-logos span{display:block;margin-top:10px}
-.training-card{width:min(650px,56%);padding:13px 14px;background:#fff;border:1px solid #df3333;line-height:1.45}
-.training-card h1{margin:0 0 6px;font-size:25px;font-weight:400;color:#666}.training-card p{font-size:12px;margin:7px 0}.training-card .training-tip{margin-top:13px}.training-card strong{font-weight:700}
-.wide-wrap{width:min(var(--wide),calc(100% - 55px));margin:auto}
-.home-features{background:#fff;padding:22px 0 38px}.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px 35px}.feature-block{display:grid;grid-template-columns:36% 64%;gap:10px;min-height:240px;align-items:start}
-.feature-art{display:flex;justify-content:center;align-items:center;min-height:225px}.feature-art img{width:94%;max-height:230px;object-fit:contain}.feature-description{padding:0 14px 0 4px}
-h2,h3{line-height:1.2}.feature-description h2,.field-description h2,.club-intro h2{font-size:24px;margin:0 0 3px;font-weight:700}
-.micro-title{font-size:11px;text-transform:uppercase;margin:0 0 8px!important;color:#696969;line-height:1.3}
-.feature-description p:not(.micro-title),.field-description p:not(.micro-title),.club-intro p:not(.micro-title),.team-card p:not(.micro-title){font-size:12px;line-height:1.62;text-align:justify;margin:0}
-.photo-divider{height:160px;background-position:center;background-size:cover;background-repeat:no-repeat}
-.photo-divider-one{background-image:url('../wp-content/uploads/2018/11/Berliner_Jugger_Pokal_2017-128.jpg')}
-.photo-divider-two{background-image:url('../wp-content/uploads/2018/05/Berliner_Jugger_Pokal_2017-356.jpg')}
-.grid-paper{background:#fdfdfd url('../images/design/feldbg.png') center/89px 89px repeat}
-.home-field{padding:23px 15px 55px}.field-description{max-width:610px;margin:0 auto 8px}.field-img{display:block;max-height:670px;max-width:min(1050px,100%);width:auto;margin:0 auto;object-fit:contain}
-.home-club{background:#fff;padding:35px 0 45px}.club-intro{width:min(610px,calc(100% - 45px));margin:0 auto 27px}.club-intro>img{display:block;width:155px;height:155px;object-fit:contain;margin:0 auto 14px}.teams-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:42px}.team-art{min-height:215px;display:flex;justify-content:center;align-items:center}.team-art img{max-width:245px;max-height:200px;object-fit:contain}.team-card h3{font-size:22px;margin:10px 0 5px}.team-card{min-width:0}
-/* Inside pages: original black Hestia heading plus the child's transparent grid and vertical Q-Tip */
-.page-head{height:205px;background:#161616;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center}.page-head h1{font-size:37px;line-height:1.2;font-weight:750;margin:0}
-.page-body{min-height:700px;background-color:#fafafa;background-image:url('../images/design/qtip.png'),url('../images/design/goldbar.png'),url('../images/design/feldbg.png');background-repeat:no-repeat,repeat-x,repeat;background-position:left top,bottom,center;background-size:147px auto,auto,89px 89px}
-.page-inner{width:min(1090px,calc(100% - 185px));margin:0 auto;padding:47px 0 135px;min-height:730px}
-.wp-import{width:100%;font-size:14px;line-height:1.65;color:#424242}
-.wp-import p{margin:0 0 14px}.wp-import h2{font-size:28px;font-weight:500;margin:16px 0 12px}.wp-import h3{font-size:22px;font-weight:400;margin:5px 0 12px}.wp-import h4{font-size:18px}
-.wp-import img{max-width:100%;height:auto;object-fit:contain}.wp-import figure{margin:10px 0 20px}
-.wp-import .builder-row{display:flex;gap:30px;align-items:flex-start;width:100%;margin:0 auto 24px;flex-wrap:nowrap}
-.wp-import .builder-cell{flex:1 1 0;min-width:0;max-width:100%;overflow-wrap:anywhere}.wp-import .builder-cell[style*="--cell-width"]{flex:0 1 var(--cell-width)}
-.wp-import .builder-row:has(> .builder-cell:only-child){max-width:880px}
-.wp-import .builder-row:has(> .builder-cell:only-child) .builder-cell{flex:1}
-.wp-import .source-image{text-align:center}.wp-import .source-image img{width:auto;max-width:100%}
-.wp-import ul{padding-left:19px}.wp-import li{margin-bottom:7px}
-.wp-import .features.as-columns{list-style:none;padding:0;text-align:center}.wp-import .features.as-columns li{padding:6px;border-bottom:1px solid #eee;font-size:13px}
-.wp-import a{overflow-wrap:anywhere}.wp-import iframe{max-width:100%;border:0}.wp-import table{display:block;max-width:100%;overflow-x:auto}
-/* The original Mitmachen page still contains its SiteOrigin HTML markup; style those grids directly. */
-.page-inner:has(#pl-22041){max-width:690px}.panel-layout .panel-grid{display:block;margin-bottom:28px}.panel-layout .panel-grid-cell{min-width:0}.panel-layout .panel-grid-cell:empty{display:none}
-.panel-layout .widget-title{margin-top:0}.panel-layout .so-widget-sow-editor .textwidget{font-size:14px;line-height:1.62}.panel-layout .textwidget span{display:block;margin:0 0 10px}
-/* Verein and software match screenshots: content and logo sidebar / three-image feature row */
-.page-inner:has(.wp-import .builder-row) .builder-cell p img[width="100"]{max-width:115px}
-.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.gallery-tile img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.gallery-note{font-size:13px;color:#666}.notice{background:#fff5d2;padding:12px;border-left:3px solid #d7a20d}
-.site-footer{background:#171717;color:#aaa}.footer-wrap{width:min(1320px,calc(100% - 45px));min-height:85px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:13px}.footer-wrap nav{display:flex;gap:22px}.footer-wrap nav a{color:#ddd}
-@media(max-width:1050px){.site-nav{gap:14px}.header-wrap{width:calc(100% - 28px)}.page-inner{width:calc(100% - 155px);margin-left:150px;margin-right:5px;padding-right:22px}.feature-block{grid-template-columns:36% 64%}.teams-grid{gap:25px}}
-@media(max-width:760px){.site-header .header-wrap{min-height:65px}.brand img{height:56px;width:56px}.menu-toggle{display:block}.site-nav{display:none;position:absolute;left:0;right:0;top:100%;padding:15px 20px;background:#fff;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 5px 10px #0003}.site-nav.open{display:flex}.site-nav a{padding:9px 12px;font-size:14px}.home-opening-inner{min-height:360px;padding:85px 14px 22px}.training-card{width:100%}.federation-logos{right:16px;top:3px}.features-grid{grid-template-columns:1fr;gap:20px}.feature-block{grid-template-columns:35% 1fr;min-height:0}.feature-art{min-height:130px}.feature-art img{max-height:180px}.teams-grid{grid-template-columns:1fr;gap:25px}.team-art{min-height:140px}.team-art img{max-height:150px}.home-field{padding:30px 17px}.page-head{height:165px}.page-head h1{font-size:32px}.page-body{background-image:url('../images/design/feldbg.png');background-repeat:repeat}.page-inner{width:calc(100% - 42px);margin:auto;padding:30px 0 70px;min-height:500px}.wp-import .builder-row{flex-direction:column;gap:12px}.wp-import .builder-cell{width:100%;flex-basis:auto!important}.footer-wrap{flex-direction:column;justify-content:center;padding:20px 0}.photo-divider{height:120px}}
-@media(max-width:480px){.feature-block{grid-template-columns:1fr;text-align:left}.feature-art{max-height:180px}.feature-art img{max-height:180px}.field-description{padding:0 5px}.training-card h1{font-size:21px}.training-card p{font-size:12px}.wide-wrap{width:calc(100% - 32px)}.team-art{min-height:130px}.site-footer .footer-wrap nav{gap:10px;font-size:12px}}
+/* Jugger Berlin – modern, static Hugo design. No frameworks or remote fonts. */
+:root{
+  --ink:#18221d;--ink-2:#25362c;--paper:#f7f7f2;--cream:#fffdf6;
+  --muted:#617066;--gold:#f4c932;--gold-2:#e5b91f;--border:#dbe0d7;
+  --shadow:0 24px 65px rgba(19,33,25,.13);--container:1230px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif;font-size:16px;line-height:1.68;-webkit-font-smoothing:antialiased}
+button,a{ -webkit-tap-highlight-color:transparent }
+a{color:#9a6800;text-underline-offset:3px}a:hover{color:#6f4d00}img{display:block;max-width:100%;height:auto}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+h1,h2,h3,p{margin-top:0}h1,h2,h3{line-height:1.09;letter-spacing:-.035em}
+.container{width:min(var(--container),calc(100% - 64px));margin-inline:auto}
+.skip{position:absolute;left:12px;top:-100px;background:#fff;color:#111;padding:12px 16px;z-index:101}.skip:focus{top:8px}
+
+/* Header */
+.site-header{height:84px;position:sticky;top:0;z-index:80;background:rgba(255,255,251,.97);border-bottom:1px solid #e5e8df;box-shadow:0 5px 20px rgba(20,25,22,.04);backdrop-filter:blur(14px)}
+.header-wrap{height:100%;display:flex;align-items:center;gap:34px}
+.brand{display:flex;gap:12px;align-items:center;flex-shrink:0;text-decoration:none!important;color:var(--ink)!important}
+.brand img{height:59px;width:59px;object-fit:contain}
+.brand span{display:flex;flex-direction:column;line-height:1.03;font-size:17px;font-weight:950;letter-spacing:.025em;white-space:nowrap}.brand span b{font-size:12px;letter-spacing:.22em;color:#956d00;margin-top:4px}
+.site-nav{display:flex;align-items:center;gap:clamp(10px,1.5vw,25px);margin-left:auto}
+.site-nav a{color:#36443b;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;white-space:nowrap;position:relative;padding:12px 0}
+.site-nav a:after{content:"";position:absolute;bottom:5px;left:0;right:100%;height:3px;border-radius:2px;background:var(--gold);transition:right .2s}.site-nav a:hover:after,.site-nav a[aria-current="page"]:after{right:0}
+.site-nav a:hover,.site-nav a[aria-current="page"]{color:var(--ink)}
+.nav-cta{display:inline-flex;align-items:center;gap:12px;white-space:nowrap;background:var(--gold);border-radius:8px;padding:13px 17px;color:var(--ink);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;box-shadow:0 3px 0 #cba01e;transition:transform .2s,background .2s}
+.nav-cta:hover{transform:translateY(-2px);background:#ffda46;text-decoration:none;color:var(--ink)}
+.menu-toggle{display:none;width:47px;height:43px;border:1px solid #d0d9d0;border-radius:8px;background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}
+.menu-toggle span{width:23px;height:2px;background:var(--ink);border-radius:3px;transition:transform .2s,opacity .2s}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Shared */
+.eyebrow{font-size:12px;line-height:1.5;letter-spacing:.2em;font-weight:900;color:#916b00;margin:0 0 18px;text-transform:uppercase}.eyebrow-hero{color:var(--gold)}.eyebrow-yellow{color:var(--gold)}
+.eyebrow-line{display:inline-block;width:22px;height:3px;vertical-align:middle;margin-right:7px;background:var(--gold)}
+.btn{min-height:51px;display:inline-flex;align-items:center;justify-content:center;gap:22px;border-radius:8px;padding:14px 22px;font-size:13px;font-weight:900;letter-spacing:.035em;text-decoration:none!important;transition:transform .2s,background .2s,border-color .2s;white-space:normal;text-align:center}
+.btn:hover{transform:translateY(-3px)}.btn span,.text-link span,.nav-cta span{font-size:18px;line-height:1}
+.btn-yellow{background:var(--gold);color:var(--ink)!important;box-shadow:0 5px 0 rgba(0,0,0,.15)}.btn-yellow:hover{background:#ffdc55}
+.btn-outline{border:1px solid rgba(255,255,255,.55);color:#fff!important;background:rgba(20,20,20,.15)}.btn-outline:hover{background:rgba(255,255,255,.12)}
+.btn-dark{background:var(--ink);color:white!important}.btn-dark:hover{background:#2c4034}
+.text-link{display:inline-flex;gap:15px;align-items:center;color:var(--ink);font-weight:900;font-size:14px;text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:8px}.text-link:hover{text-decoration:none;color:#756000}
+.on-dark{color:#fff}.on-dark:hover{color:var(--gold)}
+.section{padding:112px 0}
+
+/* Hero */
+.hero{min-height:728px;position:relative;overflow:hidden;color:white;background-color:#23372b;background-image:linear-gradient(90deg,rgba(11,22,17,.92) 0%,rgba(14,26,20,.80) 38%,rgba(16,28,23,.30) 100%),url('../wp-content/uploads/2018/11/Berliner_Jugger_Pokal_2017-128.jpg');background-position:center,center 43%;background-size:cover;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;opacity:.17;pointer-events:none;background:radial-gradient(circle at 68% 30%,transparent 0 25%,#142319 80%)}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(330px,392px);gap:clamp(30px,5vw,90px);align-items:center;min-height:690px;padding-top:72px;padding-bottom:80px}
+.hero-copy{max-width:755px}.hero h1{font-size:clamp(58px,6.2vw,98px);font-weight:950;letter-spacing:-.065em;line-height:.98;margin:0 0 27px}.hero h1 span{color:var(--gold)}
+.hero-lead{color:#e2e8df;font-size:clamp(16px,1.65vw,20px);line-height:1.65;max-width:560px;margin:0 0 31px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-facts{display:flex;gap:25px;margin-top:66px;padding-top:25px;border-top:1px solid rgba(255,255,255,.26)}
+.hero-facts span{display:flex;flex-direction:column;gap:0;padding-right:26px;border-right:1px solid rgba(255,255,255,.22)}.hero-facts span:last-child{border:0}
+.hero-facts strong{font-size:25px;letter-spacing:-.025em;line-height:1.2}.hero-facts small{color:#d9e1dc;font-size:12px}
+.hero-bottom{position:absolute;inset:auto 0 0;z-index:1;min-height:39px;display:flex;justify-content:space-between;align-items:center;padding:8px max(32px,calc((100% - var(--container))/2));font-size:10px;letter-spacing:.23em;font-weight:800;background:rgba(7,17,11,.34);color:#d9dfd8}
+/* Training schedule is managed in data/training.yaml */
+.training-card{background:#fffefa;color:var(--ink);padding:27px 28px 22px;border-radius:13px;box-shadow:0 27px 80px rgba(0,0,0,.29);transform:translateY(14px);position:relative}
+.training-card:before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--gold);border-radius:13px 13px 0 0}
+.training-card-heading{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.14em;font-weight:900;color:#506459}
+.status-dot{width:9px;height:9px;border-radius:50%;background:#72b078;box-shadow:0 0 0 4px #e6f0e5}
+.training-card h2{font-size:30px;margin:13px 0 16px;letter-spacing:-.035em;line-height:1.18}.training-card h2 span{color:#9da69e}
+.training-list{border-top:1px solid var(--border)}
+.training-entry{display:flex;gap:20px;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--border)}
+.training-day{min-width:122px;display:flex;flex-direction:column;line-height:1.3;gap:5px}.training-day strong{font-size:16px}.training-day span{font-size:13px;font-weight:850;color:#977300;white-space:nowrap}
+.training-detail{text-align:right;display:flex;flex-direction:column;gap:2px;font-size:13px;font-weight:750;line-height:1.5}.training-detail small{font-weight:500;color:#59675d;font-size:11px}.training-detail .training-note{color:#956c00}
+.training-advice{margin:16px 0 13px;font-size:12px;color:#667267;line-height:1.5}
+.training-link{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--ink);font-weight:900;font-size:13px;text-decoration:none}.training-link:hover{color:#a07700}
+
+/* Introduction */
+.intro-section{background:var(--paper)}
+.section-heading{display:flex;justify-content:space-between;gap:65px;align-items:end;margin-bottom:48px}
+.section-heading h2,.field-content h2,.club-top h2{font-size:clamp(38px,4.8vw,65px);line-height:1.04;letter-spacing:-.055em;margin:0;font-weight:930}
+.section-heading h2 em,.field-content h2 em,.club-top h2 em{font-style:normal;color:#8f9b90}
+.section-heading>p{max-width:345px;color:#627067;font-size:17px;line-height:1.75;margin:0 0 4px}
+.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
+.feature-card{display:grid;grid-template-columns:42% 58%;min-height:278px;background:#fff;border:1px solid #e7e9e1;border-radius:14px;overflow:hidden;box-shadow:0 12px 33px rgba(20,31,23,.045);transition:transform .25s,box-shadow .25s}
+.feature-card:hover{transform:translateY(-5px);box-shadow:0 18px 35px rgba(20,31,23,.10)}
+.feature-image-wrap{position:relative;display:flex;align-items:center;justify-content:center;min-width:0;background:#f0f2ed;padding:23px}
+.feature-image-wrap img{width:100%;height:205px;object-fit:contain;mix-blend-mode:multiply}
+.feature-index{position:absolute;top:12px;left:17px;color:#a1aaa1;font-size:12px;font-weight:900;letter-spacing:.06em}
+.feature-card-body{padding:28px 29px 25px;align-self:center;min-width:0}
+.micro-label{color:#9f7b12;font-size:11px;line-height:1.4;text-transform:uppercase;font-weight:900;letter-spacing:.1em;margin:0 0 8px}
+.feature-card h3{font-size:25px;margin:0 0 13px}.feature-card-body>p:last-child{font-size:13px;line-height:1.62;color:#5d695f;margin:0}
+
+/* Photography statement */
+.photo-spotlight{background:linear-gradient(90deg,rgba(14,27,19,.9),rgba(14,27,19,.6) 50%,rgba(14,27,19,.15)),url('../wp-content/uploads/2018/05/Berliner_Jugger_Pokal_2017-356.jpg') center 41%/cover no-repeat;color:#fff;min-height:420px;display:flex;align-items:center}
+.photo-spotlight-content{padding:80px 0}.photo-spotlight h2{font-size:clamp(49px,6vw,82px);line-height:1.02;max-width:680px;letter-spacing:-.06em;margin:0 0 25px}
+
+/* The pitch */
+.field-section{background:#faf9f3}
+.field-grid{display:grid;grid-template-columns:40% 60%;align-items:center;gap:16px}
+.field-content{padding-right:30px}.field-content h2{margin-bottom:30px}.field-content>p:not(.eyebrow){font-size:15px;line-height:1.8;color:#606f63;max-width:410px}
+.field-facts{display:flex;align-items:center;gap:35px;margin:30px 0}.field-facts>span{font-size:18px;font-weight:900;line-height:1.15;display:flex;flex-direction:column}.field-facts small{font-size:12px;color:#7d897e;font-weight:600;margin-top:7px}.field-facts .field-measure{font-size:38px;letter-spacing:-.04em}
+.field-visual{background:#fff;border-radius:17px;padding:28px 22px 18px;box-shadow:0 20px 65px rgba(42,55,42,.09);border:1px solid #e7e9e2}
+.field-visual img{width:100%;height:auto;object-fit:contain}.field-visual-note{display:block;color:#9da69d;text-align:center;font-size:10px;font-weight:850;letter-spacing:.16em;margin-top:13px}
+
+/* Club and teams */
+.club-section{background:#182b22;color:#fff}
+.club-top{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-bottom:52px}
+.club-top h2 em{color:#a6bcaa}
+.club-intro{display:grid;grid-template-columns:93px 1fr;column-gap:25px;align-items:center}
+.club-intro img{width:93px;height:93px;object-fit:contain;background:#fff;padding:8px;border-radius:14px;grid-row:span 2}
+.club-intro p{margin:0 0 10px;font-size:15px;line-height:1.7;color:#d4ded4}
+.club-intro .text-link{justify-self:start}
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.team-card{overflow:hidden;border-radius:14px;background:#fff;color:var(--ink);border:1px solid rgba(255,255,255,.1);transition:transform .2s}.team-card:hover{transform:translateY(-6px)}
+.team-logo{background:#f6f7f3;min-height:214px;display:flex;align-items:center;justify-content:center;padding:23px}
+.team-logo img{height:175px;max-width:100%;object-fit:contain;mix-blend-mode:multiply}
+.team-content{padding:25px 27px 28px}
+.team-content h3{font-size:25px;margin:0 0 12px}.team-content>p:last-child{font-size:13px;color:#637166;line-height:1.65;margin:0}
+
+/* Bottom CTA */
+.join-section{background:var(--gold);padding:58px 0}.join-inner{display:flex;align-items:center;justify-content:space-between;gap:28px}
+.join-inner .eyebrow{color:#604300;margin-bottom:9px}.join-inner h2{font-size:clamp(35px,4vw,56px);margin:0 0 9px}.join-inner p:not(.eyebrow){margin:0;max-width:600px;font-size:15px;color:#58470f}
+
+/* Subpages: maintain migrated SiteOrigin content without WordPress dependencies */
+.page-head{color:#fff;position:relative;background:linear-gradient(110deg,rgba(15,30,21,.97),rgba(23,48,32,.85)),url('../wp-content/uploads/2018/11/Berliner_Jugger_Pokal_2017-349-e1791905181669.jpg') center 45%/cover no-repeat;padding:83px 0 77px;min-height:245px}
+.page-head h1{font-size:clamp(43px,5vw,70px);color:#fff;letter-spacing:-.055em;margin:0;font-weight:950}
+.page-head-rule{width:62px;height:5px;border-radius:2px;background:var(--gold);margin-top:25px}
+.page-body{padding:62px 0 105px;background:linear-gradient(180deg,#f2f4ef,var(--paper))}
+.page-inner{background:#fff;min-height:430px;border:1px solid #e7eae2;border-radius:16px;box-shadow:0 22px 65px rgba(31,45,34,.06);padding:clamp(26px,5vw,69px);max-width:1050px}
+.wp-import{color:#3d4b41;font-size:15px;line-height:1.79;overflow-wrap:anywhere}
+.wp-import p{margin:0 0 16px}.wp-import h1,.wp-import h2,.wp-import h3,.wp-import h4{letter-spacing:-.03em;line-height:1.23;color:var(--ink)}
+.wp-import h1{font-size:35px}.wp-import h2{font-size:29px;margin:28px 0 16px}.wp-import h3{font-size:25px;margin:25px 0 13px;font-weight:750}.wp-import h4{font-size:20px;margin:18px 0}
+.wp-import img{max-width:100%;height:auto;object-fit:contain}.wp-import figure{margin:8px 0 18px}.wp-import .source-image{text-align:center}
+.wp-import a{color:#9b7100;font-weight:700;overflow-wrap:anywhere}.wp-import iframe{max-width:100%;border:0}.wp-import table{display:block;max-width:100%;overflow-x:auto}
+.wp-import ul{padding-left:23px}.wp-import li{margin-bottom:8px}
+.wp-import .builder-row{display:flex;gap:36px;align-items:flex-start;margin:0 0 33px;flex-wrap:nowrap;max-width:100%}
+.wp-import .builder-cell{flex:1 1 0;min-width:0;overflow-wrap:anywhere;max-width:100%}.wp-import .builder-cell[style*="--cell-width"]{flex:0 1 var(--cell-width)}
+.wp-import .builder-row:has(>.builder-cell:only-child){max-width:850px}.wp-import .builder-row:has(>.builder-cell:only-child) .builder-cell{flex:1}
+.wp-import .features.as-columns{list-style:none;padding:0;text-align:center}.wp-import .features.as-columns li{border-bottom:1px solid #e5e8e3;padding:8px}
+/* SiteOrigin leftovers: neutralize empty columns but retain original text blocks */
+.panel-layout .panel-grid{display:block;margin-bottom:24px}.panel-layout .panel-grid-cell{min-width:0}.panel-layout .panel-grid-cell:empty{display:none}.panel-layout .widget-title{margin-top:0}
+.panel-layout .siteorigin-widget-tinymce span{display:block;margin-bottom:11px}
+.panel-layout .so-widget-sow-editor .textwidget{font-size:15px;line-height:1.8}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.gallery-tile img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:9px}
+.gallery-note{font-size:13px;color:#6d766d}.notice{padding:15px 18px;background:#fff3c0;border-left:4px solid #ebba23;border-radius:4px}
+
+/* Footer */
+.site-footer{background:#111c16;color:#dae1d8}.footer-main{padding:55px 0 45px;display:flex;justify-content:space-between;gap:35px}
+.footer-brand{display:flex;align-items:center;gap:15px}.footer-brand img{height:74px;width:74px;object-fit:contain}.footer-brand div{display:flex;flex-direction:column}.footer-brand strong{font-size:17px;letter-spacing:.08em}.footer-brand span{font-size:13px;color:#a8b8ad}
+.footer-links{display:flex;flex-direction:column;align-items:flex-end;gap:22px}.footer-links nav{display:flex;gap:22px;flex-wrap:wrap}.footer-links a{color:#e7eee8;text-decoration:none;font-size:13px;font-weight:750}.footer-links a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:20px;padding:17px 0 25px;font-size:11px;color:#8fa196}
+
+@media(max-width:1150px){
+ .header-wrap{gap:22px}.site-nav{gap:12px}.site-nav a{font-size:11px}.nav-cta{padding:12px 13px}
+ .hero-inner{grid-template-columns:minmax(0,1fr) minmax(305px,365px);gap:32px}.hero h1{font-size:clamp(54px,6vw,78px)}
+ .feature-card{grid-template-columns:37% 63%}.feature-card-body{padding:25px 22px}
+}
+@media(max-width:960px){
+ .site-header{height:74px}.container{width:min(var(--container),calc(100% - 40px))}.header-wrap{gap:15px}.menu-toggle{display:flex;margin-left:auto}
+ .site-nav{display:none;position:absolute;left:0;right:0;top:74px;background:#fffefa;padding:13px 25px 20px;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 18px 30px rgba(0,0,0,.18);border-top:1px solid #eaede6}.site-nav.open{display:flex}
+ .site-nav a{font-size:14px;padding:13px 0;border-bottom:1px solid #e7e9e2}.site-nav a:after{display:none}
+ .nav-cta{margin-left:auto}.hero-inner{grid-template-columns:1fr;gap:38px;padding-top:85px;padding-bottom:73px}.hero-copy{max-width:750px}.hero h1{font-size:clamp(58px,9vw,85px)}.hero-facts{margin-top:45px}
+ .training-card{max-width:650px;width:100%;transform:none}.hero{min-height:0}.hero-inner{min-height:0}.hero-bottom{position:relative;padding-inline:20px}
+ .field-grid{grid-template-columns:1fr;gap:45px}.field-content{padding-right:0}.field-content>p:not(.eyebrow){max-width:660px}
+ .club-top{gap:35px}.club-intro{grid-template-columns:80px 1fr}.club-intro img{height:80px;width:80px}
+}
+@media(max-width:720px){
+ .section{padding:74px 0}.brand img{width:54px;height:54px}.brand span{font-size:15px}.brand span b{font-size:10px}
+ .hero{background-image:linear-gradient(110deg,rgba(11,22,17,.93),rgba(11,22,17,.60)),url('../wp-content/uploads/2018/11/Berliner_Jugger_Pokal_2017-128.jpg')}
+ .hero-inner{padding-top:62px;padding-bottom:65px}.hero h1{font-size:clamp(53px,12vw,80px)}.hero-lead{font-size:17px}
+ .hero-facts{justify-content:space-between;gap:10px}.hero-facts span{padding-right:10px}.hero-facts strong{font-size:23px}.hero-facts small{font-size:10px}
+ .section-heading{display:block;margin-bottom:32px}.section-heading>p{margin-top:22px;max-width:570px;font-size:16px}
+ .feature-grid{grid-template-columns:1fr}.feature-card{grid-template-columns:38% 62%;min-height:225px}.feature-image-wrap img{max-height:200px}
+ .photo-spotlight{min-height:380px}.photo-spotlight h2{font-size:clamp(46px,8vw,65px)}
+ .club-top{grid-template-columns:1fr}.club-intro{max-width:530px}.team-grid{grid-template-columns:1fr;gap:17px}.team-card{display:grid;grid-template-columns:35% 65%}.team-logo{min-height:215px}.team-logo img{max-height:160px}.team-content{align-self:center}
+ .join-inner{display:block}.join-inner .btn{margin-top:25px}.join-section{padding:54px 0}
+ .page-head{min-height:0;padding:65px 0}.page-body{padding:33px 0 75px}.page-inner{padding:27px 25px}
+ .wp-import .builder-row{flex-direction:column;gap:10px}.wp-import .builder-cell[style*="--cell-width"]{flex:1 1 auto;width:100%}.wp-import .builder-cell{width:100%}
+ .footer-main{display:block}.footer-links{align-items:flex-start;margin-top:35px}
+}
+@media(max-width:510px){
+ .container{width:calc(100% - 32px)}.site-header{height:68px}.site-nav{top:68px}.brand img{height:49px;width:49px}.nav-cta{font-size:10px;padding:10px 9px;gap:6px}.menu-toggle{width:39px;height:40px}.header-wrap{gap:7px}
+ .hero-inner{padding-top:47px}.hero h1{font-size:clamp(48px,13vw,67px)}.hero-lead{font-size:16px}.hero-actions{flex-direction:column;align-items:stretch}.btn{justify-content:space-between}
+ .hero-facts{gap:7px}.hero-facts strong{font-size:19px}.hero-facts span{padding-right:7px}.hero-facts small{font-size:9px}.hero-bottom{font-size:8px;letter-spacing:.08em}
+ .training-card{padding:25px 20px 20px}.training-card h2{font-size:27px}.training-entry{gap:10px}.training-day{min-width:102px}.training-day strong{font-size:14px}.training-day span{font-size:11px}.training-detail{font-size:12px}
+ .section-heading h2,.field-content h2,.club-top h2{font-size:clamp(37px,10vw,48px)}.feature-card{display:block}.feature-image-wrap{height:190px}.feature-image-wrap img{max-height:155px;max-width:220px}.feature-card-body{padding:24px}
+ .field-visual{padding:18px 10px 14px}.field-facts{gap:23px}.field-facts .field-measure{font-size:32px}
+ .club-intro{grid-template-columns:75px 1fr;gap:15px}.club-intro img{width:75px;height:75px}.club-intro p{font-size:13px}.club-intro a{grid-column:2}
+ .team-card{display:block}.team-logo{min-height:188px}.team-logo img{height:155px}.team-content{padding:22px}
+ .page-inner{padding:22px 17px}.wp-import{font-size:14px}.wp-import h3{font-size:23px}.wp-import h2{font-size:26px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .footer-links nav{gap:11px 17px}.footer-bottom{display:block}.footer-bottom span{display:block;margin:7px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}

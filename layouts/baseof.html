@@ -2,7 +2,7 @@
 <html lang="{{ .Site.Language.Lang }}">
 <head>
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
- <meta name="theme-color" content="#171717">
+ <meta name="theme-color" content="#171f1b">
  {{ if not .Site.Params.ready }}<meta name="robots" content="noindex,nofollow">{{ end }}
  <title>{{ if .IsHome }}Jugger e.V. – Jugger in Berlin{{ else }}{{ .Title }} | Jugger e.V.{{ end }}</title>
  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
@@ -14,13 +14,14 @@
 <body class="{{ if .IsHome }}is-home{{ else }}is-inner{{ end }}">
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 <header class="site-header" id="header">
- <div class="header-wrap">
-  <a class="brand" href="{{ "" | relURL }}" aria-label="Jugger e.V. – Startseite"><img src="{{ "wp-content/uploads/2018/04/VereinslogoMedium.png" | relURL }}" alt="Jugger e.V." width="70" height="70"></a>
-  <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-nav">Menü ☰</button>
+ <div class="header-wrap container">
+  <a class="brand" href="{{ "" | relURL }}" aria-label="Jugger e.V. – Startseite"><img src="{{ "wp-content/uploads/2018/04/VereinslogoMedium.png" | relURL }}" alt="Jugger e.V." width="60" height="60"><span>JUGGER <b>BERLIN</b></span></a>
   <nav class="site-nav" id="main-nav" aria-label="Hauptnavigation">{{ range .Site.Menus.main }}<a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}</nav>
+  <a class="nav-cta" href="{{ "mitmachen/" | relURL }}">Probetraining <span aria-hidden="true">↗</span></a>
+  <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
  </div>
 </header>
 <main id="inhalt">{{ block "main" . }}{{ end }}</main>
-<footer class="site-footer"><div class="footer-wrap"><span>Jugger e.V. · Berlin</span><nav aria-label="Fußnavigation"><a href="{{ "pressemappe/" | relURL }}">Pressemappe</a><a href="{{ "impressum/" | relURL }}">Impressum</a><a href="mailto:info@jugger-berlin.de">Kontakt</a></nav></div></footer>
+<footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><img src="{{ "wp-content/uploads/2018/04/VereinslogoMedium.png" | relURL }}" alt="" loading="lazy"><div><strong>JUGGER E.V.</strong><span>Jugger in Berlin – seit 1998.</span></div></div><div class="footer-links"><nav aria-label="Fußnavigation"><a href="{{ "mitmachen/" | relURL }}">Mitmachen</a><a href="{{ "der-verein/" | relURL }}">Der Verein</a><a href="{{ "pressemappe/" | relURL }}">Pressemappe</a><a href="{{ "impressum/" | relURL }}">Impressum</a></nav><a href="mailto:info@jugger-berlin.de">info@jugger-berlin.de <span aria-hidden="true">↗</span></a></div></div><div class="footer-bottom container"><span>© {{ now.Year }} Jugger e.V. · Berlin</span><span>Mit Teamgeist gemacht.</span></div></footer>
 <script defer src="{{ "js/main.js" | relURL }}"></script>
 </body></html>

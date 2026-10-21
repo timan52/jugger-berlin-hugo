@@ -1,38 +1,92 @@
 {{ define "main" }}
-<section class="home-opening">
-  <div class="home-opening-inner">
-    <div class="federation-logos"><img src="{{ "wp-content/uploads/2018/10/Landessportbund_Berlin_logo.svg_-231x300.png" | relURL }}" alt="Landessportbund Berlin" loading="lazy"><span>Berliner Turn- und<br>Freizeitsport-Bund</span></div>
-    <div class="training-card">
-      <h1>Trainingszeiten 2026</h1>
-      <p><strong>Hallen Training</strong> – Donnerstags 19:00 – 22:00 Uhr<br>Puccinistraße 2–6, 10409 Berlin (<a href="https://maps.app.goo.gl/mvYnLAFrK2QKd3HB7">Karte</a>)</p>
-      <p><strong>Draußen Training</strong> – Dienstags 17:00 – 19:00 Uhr<br>Bitte vorher anmelden. Tempelhofer Feld (<a href="https://maps.app.goo.gl/YaxkfiFcfCBR17j86">Karte</a>)</p>
-      <p><strong>Draußen Training</strong> – Sonntags 14:00 – 17:00 Uhr<br>Bitte vorher anmelden. Tempelhofer Feld (<a href="https://maps.app.goo.gl/YaxkfiFcfCBR17j86">Karte</a>)</p>
-      <p class="training-tip"><em>Probetraining: Kommt gerne jederzeit vorbei! Da Trainings in seltenen Fällen mal ausfallen können, schreibt uns gerne vorher unter <a href="mailto:info@jugger-berlin.de">info@jugger-berlin.de</a> an.</em></p>
+{{ $home := .Site.Data.home }}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-inner container">
+    <div class="hero-copy">
+      <p class="eyebrow eyebrow-hero"><span class="eyebrow-line"></span> JUGGER IN BERLIN · SEIT 1998</p>
+      <h1 id="hero-title">Mehr als<br><span>ein Spiel.</span><br>Ein Team.</h1>
+      <p class="hero-lead">Tempo, Taktik und Teamgeist: Entdecke Jugger, den dynamischen Teamsport für alle, die gemeinsam etwas bewegen wollen.</p>
+      <div class="hero-actions">
+        <a class="btn btn-yellow" href="{{ "mitmachen/" | relURL }}">Probetraining entdecken <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-outline" href="{{ "was-ist-jugger/" | relURL }}">So funktioniert Jugger <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-facts" aria-label="Auf einen Blick">
+        <span><strong>5 vs 5</strong><small>auf dem Feld</small></span>
+        <span><strong>1998</strong><small>Vereinsgründung</small></span>
+        <span><strong>Berlin</strong><small>unsere Heimat</small></span>
+      </div>
     </div>
+    <aside class="training-card" aria-labelledby="training-title">
+      <div class="training-card-heading"><span class="status-dot" aria-hidden="true"></span><span>DEIN TRAINING IN BERLIN</span></div>
+      <h2 id="training-title">Trainingszeiten <span>2026</span></h2>
+      <div class="training-list">
+      {{ range .Site.Data.training }}
+      <div class="training-entry">
+        <div class="training-day"><strong>{{ .day }}</strong><span>{{ .time }}</span></div>
+        <div class="training-detail"><span>{{ .type }}</span><small>{{ .place }}</small>{{ with .note }}<small class="training-note">{{ . }}</small>{{ end }}</div>
+      </div>
+      {{ end }}
+      </div>
+      <p class="training-advice">Bitte melde dich vor dem ersten Training kurz bei uns, falls sich die Zeiten geändert haben.</p>
+      <a class="training-link" href="mailto:info@jugger-berlin.de">Vorher kurz nachfragen <span aria-hidden="true">↗</span></a>
+    </aside>
   </div>
+  <div class="hero-bottom" aria-hidden="true"><span>SPORT. GEMEINSCHAFT. BERLIN.</span><span>↓ SCROLLEN & ENTDECKEN</span></div>
 </section>
-<section class="home-features" aria-label="Jugger erklärt">
- <div class="wide-wrap features-grid">
- {{ range .Site.Data.home.features }}
-  <article class="feature-block">
-   <div class="feature-art"><img src="{{ .image | relURL }}" alt="" loading="lazy"></div>
-   <div class="feature-description"><h2>{{ .title }}</h2><p class="micro-title">{{ .subtitle }}</p><p>{{ .description }}</p></div>
-  </article>
- {{ end }}
+
+<section class="section intro-section" id="jugger-erklaert" aria-labelledby="intro-title">
+ <div class="container">
+  <div class="section-heading reveal">
+    <div><p class="eyebrow">01 / DAS IST JUGGER</p><h2 id="intro-title">Ein Sport.<br><em>Unzählige Möglichkeiten.</em></h2></div>
+    <p>Jugger verbindet Geschwindigkeit, Strategie und Fairplay. Zwei Teams, ein Jugg und viele Möglichkeiten, gemeinsam zu punkten.</p>
+  </div>
+  <div class="feature-grid">
+   {{ range $i, $feature := $home.features }}
+   <article class="feature-card reveal">
+      <div class="feature-image-wrap"><span class="feature-index">0{{ add $i 1 }}</span><img src="{{ $feature.image | strings.TrimPrefix "/" | relURL }}" alt="{{ $feature.title }} – Illustration" loading="lazy"></div>
+      <div class="feature-card-body"><p class="micro-label">{{ $feature.subtitle }}</p><h3>{{ $feature.title }}</h3><p>{{ $feature.description }}</p></div>
+   </article>
+   {{ end }}
+  </div>
  </div>
 </section>
-<div class="photo-divider photo-divider-one" role="img" aria-label="Jugger-Wettkampf"></div>
-<section class="home-field grid-paper">
- <div class="field-description"><h2>{{ .Site.Data.home.field.title }}</h2><p class="micro-title">{{ .Site.Data.home.field.subtitle }}</p><p>{{ .Site.Data.home.field.description }}</p></div>
- <img class="field-img" src="{{ .Site.Data.home.field.image | relURL }}" alt="Grafische Darstellung eines Jugger-Spielfeldes mit zwei Teams" loading="lazy">
-</section>
-<div class="photo-divider photo-divider-two" role="img" aria-label="Jugger-Sportlerinnen und -Sportler"></div>
-<section class="home-club">
- <div class="club-intro"><img src="{{ .Site.Data.home.club.image | relURL }}" alt="Jugger e.V. Logo" loading="lazy"><h2>{{ .Site.Data.home.club.title }}</h2><p class="micro-title">{{ .Site.Data.home.club.subtitle }}</p><p>{{ .Site.Data.home.club.description }}</p></div>
- <div class="wide-wrap teams-grid">
- {{ range .Site.Data.home.teams }}
- <article class="team-card"><div class="team-art"><img src="{{ .image | relURL }}" alt="Logo {{ .title }}" loading="lazy"></div><h3>{{ .title }}</h3><p class="micro-title">{{ .subtitle }}</p><p>{{ .description }}</p></article>
- {{ end }}
+
+<section class="photo-spotlight" aria-labelledby="photo-heading">
+ <div class="container photo-spotlight-content reveal">
+  <p class="eyebrow eyebrow-hero">AUF DEM FELD ZÄHLT ZUSAMMENHALT</p>
+  <h2 id="photo-heading">Volle Energie.<br>Ein Ziel.</h2>
+  <a class="text-link on-dark" href="{{ "mitmachen/" | relURL }}">Werde Teil des Teams <span aria-hidden="true">↗</span></a>
  </div>
+</section>
+
+<section class="section field-section" aria-labelledby="field-title">
+ <div class="container field-grid">
+  <div class="field-content reveal">
+   <p class="eyebrow">02 / DAS SPIELFELD</p>
+   <h2 id="field-title">40 Meter.<br><em>Volle Konzentration.</em></h2>
+   <p>{{ $home.field.description }}</p>
+   <div class="field-facts"><span class="field-measure">40 × 20 <small>Meter Spielfeld</small></span><span>2 Teams<br><small>5 gegen 5</small></span></div>
+   <a class="text-link" href="{{ "was-ist-jugger/" | relURL }}">Mehr über die Regeln <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="field-visual reveal"><img src="{{ $home.field.image | strings.TrimPrefix "/" | relURL }}" alt="Illustration des Jugger-Spielfelds mit zwei Teams" loading="lazy"><span class="field-visual-note">DAS JUGGER-SPIELFELD / SCHEMATISCH</span></div>
+ </div>
+</section>
+
+<section class="section club-section" aria-labelledby="club-title">
+ <div class="container">
+  <div class="club-top reveal">
+    <div><p class="eyebrow eyebrow-yellow">03 / DER VEREIN</p><h2 id="club-title">Eine Stadt.<br><em>Viele Teams.</em></h2></div>
+    <div class="club-intro"><img src="{{ $home.club.image | strings.TrimPrefix "/" | relURL }}" alt="Logo Jugger e.V." loading="lazy"><p>{{ $home.club.description }}</p><a class="text-link on-dark" href="{{ "der-verein/" | relURL }}">Mehr über unseren Verein <span aria-hidden="true">↗</span></a></div>
+  </div>
+  <div class="team-grid">
+    {{ range $home.teams }}
+    <article class="team-card reveal"><div class="team-logo"><img src="{{ .image | strings.TrimPrefix "/" | relURL }}" alt="Logo {{ .title }}" loading="lazy"></div><div class="team-content"><p class="micro-label">{{ .subtitle }}</p><h3>{{ .title }}</h3><p>{{ .description }}</p></div></article>
+    {{ end }}
+  </div>
+ </div>
+</section>
+
+<section class="join-section" aria-labelledby="join-title">
+ <div class="container join-inner reveal"><div><p class="eyebrow">DEIN ERSTES TRAINING</p><h2 id="join-title">Bereit fürs Feld?</h2><p>Du brauchst keine Vorerfahrung und keine eigene Ausrüstung. Komm vorbei und lerne Jugger kennen.</p></div><a class="btn btn-dark" href="{{ "mitmachen/" | relURL }}">Jetzt mitmachen <span aria-hidden="true">↗</span></a></div>
 </section>
 {{ end }}
