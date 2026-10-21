@@ -23,7 +23,26 @@
       {{ range .Site.Data.training }}
       <div class="training-entry">
         <div class="training-day"><strong>{{ .day }}</strong><span>{{ .time }}</span></div>
-        <div class="training-detail"><span>{{ .type }}</span><small>{{ .place }}</small>{{ with .note }}<small class="training-note">{{ . }}</small>{{ end }}</div>
+        <div class="training-detail">
+  <span>{{ .type }}</span>
+
+  <small>
+    {{ .place }}
+    {{ with .map_url }}
+      (<a href="{{ . }}"
+          class="training-map-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Trainingsort auf Google Maps öffnen">
+        Karte ↗
+      </a>)
+    {{ end }}
+  </small>
+
+  {{ with .note }}
+    <small class="training-note">{{ . }}</small>
+  {{ end }}
+</div>
       </div>
       {{ end }}
       </div>
